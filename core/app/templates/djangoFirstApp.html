@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Create Your First Django App{% endblock title %}
+{% block main_content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-11">
+            <article class="blog-post">
+                <h2 class="blog-post-title">Complete Step-up of Your First Django Project With Simple Steps</h2>
+                <p class="blog-post-meta">Posted on January 1, 2024 by <a href="#">Shoaib</a></p>
+
+                <p style="text-align: justify;">Are you diving into the world of web development with Django? Fantastic choice! Django is a high-level Python web framework that simplifies the process of building web applications. In this beginner-friendly guide, we'll walk you through the essential steps to create and set up your first Django project and application. Whether you're new to programming or transitioning from another language, these steps will serve as your roadmap to success.</p>
+
+                <hr>
+
+                <!-- Add social media sharing buttons if desired -->
+                
+                <!-- Comments section -->
+                <div id="comments">
+                    <!-- Disqus or other commenting system integration can go here -->
+                </div>
+                
+                <h3>Django Project Setup Tutorial</h3>
+                <p>Below are the steps to set up a Django project:</p>
+                <ol>
+                    <li><b>Opening PowerShell:</b></li>
+                    <p>The initial step involves accessing PowerShell. To initiate this process, press the Windows key on your keyboard, then type 'PowerShell' into the search bar. Subsequently, right-click on the PowerShell icon that appears and opt for 'Run as Administrator' from the contextual menu.</p>
+                    <br>
+                    <img src="{% static 'images/powershellimage.jpg' %}" alt="PowerShell Screenshot" style="width: 100%; height: auto;">
+                    <br>
+                    <br>
+                    <img src="{% static 'images/powershell.jpg' %}" alt="PowerShell Screenshot" style="width: 100%; height: auto;">
+                    <p>If Python is not installed on your system, you can download and install it from <a href="https://www.python.org/downloads/">python.org</a>.</p>
+
+                    <li><b>Install Python:</b></li>
+                    <img src="{% static 'images/versioncheck.jpg' %}" alt="PowerShell Screenshot" style="width: 100%; height: auto;">
+                    <ul>
+                        <li>Make sure you have Python installed on your system.</li>
+                    </ul>
+                    
+
+                    <li><b>Install Django:</b></li>
+                    <ul>
+                        <li>Use pip to install Django - <code>pip install Django</code>.</li>
+
+                    </ul>
+
+                    <li><b>Create a Django project:</b></li>
+                    <ul>
+                    <li>Run <code>django-admin startproject myproject</code>.</li>
+
+                    </ul>
+
+
+                    <li><b>Configure static files:</b></li>
+                    <ul>
+                    <li>Create a directory named <code>static</code> and define static file settings in <code>settings.py</code>.</li>
+
+
+                    </ul>
+                        <pre><code>
+                            myproject/
+                            ├── myproject/
+                            │   ├── __init__.py
+                            │   ├── settings.py
+                            │   ├── urls.py
+                            │   └── wsgi.py
+                            └── static/
+                            </code></pre>
+                        
+
+                        <hr>
+
+                      
+                        <pre><code>
+                            STATIC_URL = '/static/'
+                            STATICFILES_DIRS = [
+                                BASE_DIR / "static",
+                            ]
+                            </code></pre>
+
+                    <li><b>Configure templates:</b></li>
+                    <ul>
+                    <li>Create a directory named <code>templates</code> and define template settings in <code>settings.py</code>.</li>
+
+                    </ul>
+                            <pre><code>
+                            myproject/
+                            ├── myproject/
+                            │   ├── __init__.py
+                            │   ├── settings.py
+                            │   ├── urls.py
+                            │   └── wsgi.py
+                            ├── static/
+                            └── templates/
+                            </code></pre>
+
+                            <hr>
+
+                            <pre><code>
+                                TEMPLATES = [
+                                {
+                                    ...
+                                    'DIRS': [os.path.join(BASE_DIR, 'templates')],
+                                    ...
+                                },
+
+                                ]
+                            
+                                </code></pre>
+
+
+                <li><b>Run the development server:</b>.</li>
+                <ul>
+                    <li>Start the server using <code>python manage.py runserver</code>.</li>
+
+
+                </ul>
+
+                    <li><b>Create a Django app (optional):</b></li>
+                    <ul>
+                    <li>Run <code>python manage.py startapp myapp</code>.</li>
+
+                    </ul>
+
+                    <li><b>Develop your app:</b></li>
+                    <ul>
+                    <li>Create models, views, and templates to build your web application.</li>
+
+                    </ul>
+                </ol>
+                
+                <!-- Video Section -->
+                <h3>Video Tutorial</h3>
+                <div>
+                    <video controls style="width: 100%;">
+                        <source src="{% static 'videos/tutorial_video.mp4' %}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+            </article>
+        </div>
+        <div class="col-md-4">
+            <!-- Sidebar content such as recent posts, tags, etc. can go here -->
+        </div>
+    </div>
+</div>
+
+{% endblock main_content %}

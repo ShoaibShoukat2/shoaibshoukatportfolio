@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main_content %}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .portfolio-item {
+        margin-bottom: 30px;
+    }
+    .portfolio-item img {
+        max-width: 100%;
+        height: auto;
+        border: 5px solid #dee2e6;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .portfolio-item img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .portfolio-item .card-body {
+        text-align: center;
+    }
+    .portfolio-item .btn {
+        margin-top: 10px;
+    }
+    .github-icon {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+    .card-title {
+        font-weight: bold;
+    }
+    .card-text {
+        color: #6c757d;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Single Project with Relevant Images -->
+        <div class="col-md-12 portfolio-item">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h5 class="card-title">My Project</h5>
+                    <p class="card-text">Brief description of my project.</p>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{% static 'eventssiteimage/picture1.jpg' %}" class="card-img p-2" alt="Project Image 1">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'eventssiteimage/picture2.jpg' %}" class="card-img p-2" alt="Project Image 2">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'eventssiteimage/picture3.jpg' %}" class="card-img p-2" alt="Project Image 3">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'eventssiteimage/picture4.jpg' %}" class="card-img p-2" alt="Project Image 4">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'eventssiteimage/picture5.jpg' %}" class="card-img p-2" alt="Project Image 5">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'eventssiteimage/picture6.jpg' %}" class="card-img p-2" alt="Project Image 6">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'eventssiteimage/picture7.jpg' %}" class="card-img p-2" alt="Project Image 7">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'eventssiteimage/picture8.jpg' %}" class="card-img p-2" alt="Project Image 8">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'eventssiteimage/picture9.jpg' %}" class="card-img p-2" alt="Project Image 9">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'eventssiteimage/picture10.jpg' %}" class="card-img p-2" alt="Project Image 10">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'eventssiteimage/picture11.jpg' %}" class="card-img p-2" alt="Project Image 11">
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+    <a href="https://github.com/your_github_link" class="github-icon">
+        <img src="{% static 'eventssiteimage/github_icon.png' %}" alt="GitHub Icon" style="width: 40px; height: 40px;">
+    </a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock main_content %}
+
+
+
