@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Blogs{% endblock title %}
+{% block main_content %}
+
+<div class="container my-5">
+    <div class="d-flex justify-content-end mb-3">
+        <a href="https://github.com/ShoaibShoukat2/AIRoadPrediction" target="_blank" class="text-dark mx-2">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/shoaib-shoukat-722999228/" target="_blank" class="text-dark mx-2">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+      </div>
+
+      
+
+    
+  <h2 class="text-center mb-4 display-4 font-weight-bold">AI-Powered Car Detection Project</h2>
+  <p class="text-center text-muted mb-5">
+    A smart AI solution for detecting vehicle road status, with manual verification options for precise results.
+  </p>
+
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+      <p class="lead text-justify">
+        This project leverages artificial intelligence to analyze images of cars uploaded by users. The AI model detects if a car is on the road or not and displays the initial verification status as either "Pending" or "Accepted," based on the AI's assessment.
+      </p>
+      <p class="lead text-justify">
+        Admins can manually review the AI-generated status. If the AI makes an error, the admin can override it, updating the status to either accept or reject the recommendation. The final status—whether AI-verified or admin-reviewed—is then displayed to the user.
+      </p>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="{% static 'websites/AISite/home.png' %}" class="img-fluid rounded shadow-lg mb-4" alt="Car Detection Example">
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm hover-shadow-lg">
+        <div class="card-body">
+          <img src="{% static 'websites/AISite/report.png' %}" class="card-img-top mb-3" alt="AI Detection Process">
+          <h5 class="card-title font-weight-bold">AI Detection Process</h5>
+          <p class="card-text text-muted">
+            The AI model analyzes the uploaded car image and identifies if the car is on a road. This initial detection status is displayed to the user as either "Accepted" or "Pending."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm hover-shadow-lg">
+        <div class="card-body">
+          <img src="{% static 'websites/AISite/report.png' %}" class="card-img-top mb-3" alt="Admin Review Panel">
+          <h5 class="card-title font-weight-bold">Admin Verification</h5>
+          <p class="card-text text-muted">
+            Admins can manually review and verify the AI-generated results, ensuring accuracy. If the AI's assessment is incorrect, the admin has the option to override the status.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm hover-shadow-lg">
+        <div class="card-body">
+          <img src="{% static 'websites/AISite/status.png' %}" class="card-img-top mb-3" alt="Final Status Display">
+          <h5 class="card-title font-weight-bold">Status Display</h5>
+          <p class="card-text text-muted">
+            The final status, verified by AI or manually by an admin, is shown to the user. This clear display allows users to see if further verification was required for complete accuracy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock main_content %}

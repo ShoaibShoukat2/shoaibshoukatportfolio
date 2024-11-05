@@ -31,3 +31,13 @@ def FuiSite(request):
 
 
 
+# Website functons
+
+def AISite(request):
+    
+    return render(request,'websites/AiSite.html')
+
+
+
+
+

@@ -6,6 +6,17 @@ urlpatterns = [
     path('blogs/',blogs,name="blogs-page"),
     path('django-first-app/',djangoFirstApp,name="djangoFirstApp-page"),
     path('event-site/',eventsite,name="evenet-website"),
-    path('fui-site/',FuiSite,name="fui-website")
+    path('fui-site/',FuiSite,name="fui-website"),
+    
+    
+    # website urls
+    
+    path('ai-site',AISite,name="ai-page")
+    
+    
+    
+    
 
 ]
+
+
